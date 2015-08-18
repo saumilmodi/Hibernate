@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+	<class name="com.online.Employee" table="EmployeeHibernate">
+	
+		<id name="eId">
+			<generator class="increment"></generator>
+		</id>
+		
+		<property name="fname" length="50"/>
+		<property name="lname" length="50"/>
+		<property name="salary" length="50"/>
+		<many-to-one name="aId" class="com.online.Address" not-null="true" cascade="all"></many-to-one>
+	</class>
+</hibernate-mapping>

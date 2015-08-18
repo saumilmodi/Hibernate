@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC   
+ 		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ 			"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">   
+  
+ <hibernate-mapping>
+	<class name="com.online.bean.Customer" table="CustomerUnionSubclass">
+		<id name="cid" column="CustomerId"/>
+		
+		<property name="name" column="CustomerName" length="50"/>
+		
+		<union-subclass name="com.online.bean.CustomerAddressInformation">
+			<property name="aptno" column="AptNumber" length="50"/>
+			<property name="aptname" column="AptName" length="50"/>
+			<property name="street" column="Street" length="50"/>
+		</union-subclass> 
+		
+		<union-subclass name="com.online.bean.CustomerInformation">
+			<property name="email" column="Email" length="50"/>
+			<property name="phoneNumber" column="PhoneNumber" length="50"/>
+		</union-subclass>
+	</class>
+ 
+ </hibernate-mapping>

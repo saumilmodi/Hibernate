@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class name="com.online.OnToMany.Employee" table="EmployeeOneToMany">
+   		<id name="eid">
+   			<generator class="native"/>
+   		</id>
+   		<property name="ename" column="EmployeeName"></property>
+   		<property name="phonenumber" column="PhoneNumber"></property>
+   		
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC   
+ 		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ 			"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">   
+  
+ <hibernate-mapping>
+	
+	
+	<class name="com.bean.CustomerInformation" table="CustomerInformation">
+ 	
+		<id name="customerId" column="customerid">
+			<generator class="increment"/>
+		</id>
+		
+		<property name="customerName" column="first_name" length="100"/>
+		<property name="customerEmail" column="email" length="35"/>
+		 	
+ 	
+ 	</class>
+ 
+ 
+ </hibernate-mapping>

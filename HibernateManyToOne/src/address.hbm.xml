@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+	<class name="com.online.Address" table="AddressHibernate">
+	<id name="aId">
+		<generator class="increment"></generator>
+	</id>
+	
+	<property name="street" length="50"></property>
+	<property name="city" length="50"></property>
+	<property name="state" length="50"></property>
+	<property name="country" length="50"></property>
+	
+	
+	</class>
+	
+</hibernate-mapping>

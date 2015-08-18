@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class name="com.online.OnToMany.Address" table="AddressOneToMany">
+   		<id name="aid">
+   			<generator class="assigned"/>
+   		</id>
+   		
+   		<property name="aptname" length="20"></property>
+   		<property name="street" length="20"></property>
+   		<list name="employee" cascade="all">
+   			<key column="KeyColumn"></key>
+   			<index column="Index"></index>
+   			<one-to-many class="com.online.OnToMany.Employee"/>
+   		</list>
+   
+   </class>
+   
+   
+</hibernate-mapping>

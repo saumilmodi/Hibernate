@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ 			"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    
+    <class name="com.hib.Employee" table="employee">
+        
+        <id name="id" type="long" column="EMP_ID">            
+             <generator class="increment"/>            
+        </id>        
+        <property name="name" type="string" column="EMP_NAME" not-null="true" length="20" />             
+        <property name="salary" column="EMP_Sal" not-null="true" length="10" />             
+        
+        <many-to-one name="address" class="com.hib.Address" column="ADDRESS" not-null="true" cascade="all" /> 
+        
+    </class>
+    
+</hibernate-mapping>
